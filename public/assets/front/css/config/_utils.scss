@@ -1,0 +1,52 @@
+:root{
+    --primary:#141414;
+    --primary-75:#DEDEDE;
+    --primary-100:#858585;
+    --primary-200:#424242;
+    --primary-300:#282828;
+    --primary-400:#1F1E1E;
+    --primary-500:#151414;
+    --primary-600:#0A0909;
+    --primary-700:#030303;
+    --black:#000000;
+    --white:#ffffff;
+
+    --gray-50:#F9F9F9;
+    --gray-100:#EDEDED;
+    --gray-200:#525252;
+    --gray-500:#C4C4C4;
+}
+
+.container{
+    max-width:calc(1216px + 60px);
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    @media screen and (max-width:480px) {
+        padding-left:16px;
+        padding-right: 16px;
+    }
+}
+
+.fixBtn{
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--black);
+    background-color: var(--gray-50);
+    transition: all .3s linear;
+    border: 1px solid var(--gray-50);
+    border-radius: 60px;
+    @media screen and (min-width:992px) {
+        &:hover{
+            color: var(--gray-50);
+            background-color: var(--black);
+            img{
+                filter: invert(1);
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+section,
+.section {
+  place-content: center;
+  &.homeSection {
+    height: calc(100vh - 150px);
+    background-color: var(--white);
+    position: relative;
+    .container{
+        position: relative;
+    }
+    h1 {    
+      font-size: 220px;
+      line-height: 156px;
+      letter-spacing: 9px;
+      text-indent: 82px;
+    }
+    .scrollDownButton{
+        position: absolute;
+        right: 0;
+    }
+    .sectionBottom {
+      display: flex;
+      margin-top: 14vh;
+
+      .shortText {
+        margin-left: auto;
+        max-width: 420px;
+      }
+      .contactMe{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        span{
+            font-weight: 500;
+            font-size: 24px;
+        }
+        a{
+            font-size: 20px;
+            font-weight: 400;
+        }
+      }
+    }
+  }
+}

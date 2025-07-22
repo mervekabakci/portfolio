@@ -1,0 +1,40 @@
+.navbar {
+  display: inline-flex;
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 80px;
+    padding: 5px;
+    background-color: var(--black);
+    overflow: hidden;
+    .navItem {
+      display: flex;
+      align-items: center;
+      height: 46px;
+      .navLink {
+        color: var(--gray-500);
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 48px;
+        height: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+        transition: all 0.3s linear;
+        &.active {
+          background-color: var(--white);
+          color: var(--black);
+        }
+        @media screen and (min-width: 992px) {
+          &:hover {
+            background-color: var(--white);
+            color: var(--black);
+          }
+        }
+      }
+    }
+  }
+}
