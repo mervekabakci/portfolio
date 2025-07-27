@@ -1,2 +1,20 @@
 @import "config/index";
 @import "components/index";
+
+body {
+  &.opened {
+    .mainMobile {
+      @media screen and (max-width: 991.98px) {
+        transition: all 0.3s linear;
+        transform: translateX(-55px) translateY(-50%);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+        border-radius: 60px;
+        height: 84vh;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        width: calc(100vw - 200px);
+      }
+    }
+  }
+}

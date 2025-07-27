@@ -1,10 +1,82 @@
-header{
-    text-align: center;
-    padding-top: 32px;
-    .brand{
-        font-family: "Plus Jakarta Sans", sans-serif;
-        color: var(--black);
-        font-weight: 900;
-        margin-bottom: 40px;
+header {
+  text-align: center;
+  padding-top: 32px;
+  @media screen and (max-width:991.98px) {
+    height: 72px;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+  }
+  .header {
+    @media screen and (max-width: 991.98px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
+  }
+  .brand {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: var(--black);
+    font-weight: 900;
+    margin-bottom: 40px;
+    @media screen and (max-width: 991.98px) {
+      margin-bottom: 0;
+    }
+  }
+  .navbarButton {
+    display: none;
+    @media screen and (max-width: 991.98px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      background-color: var(--black);
+      padding: 14px 10px;
+      z-index: 9999;
+      transition: all 0.3s linear;
+      &:before,
+      &:after {
+        content: "";
+        background-color: var(--white);
+        height: 2px;
+        border-radius: 2px;
+        transition: all 0.3s linear;
+        width: 100%;
+        position: relative;
+      }
+      .line {
+        background-color: var(--white);
+        border-radius: 2px;
+        width: 100%;
+        height: 2px;
+        transition: all 0.3s linear;
+      }
+      &.active {
+        background: var(--white);
+        right: 200px;
+        position: absolute;
+        top: 30px;
+        justify-content: center;
+        .line {
+          opacity: 0;
+          visibility: hidden;
+          overflow: hidden;
+        }
+        &:after {
+          transform: rotate(45deg);
+          background-color: var(--black);
+          top: -2px;
+        }
+        &:before {
+          background-color: var(--black);
+          transform: rotate(-45deg);
+          top: 2px;
+        }
+      }
+    }
+  }
 }
