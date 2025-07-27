@@ -1,6 +1,8 @@
 header {
   text-align: center;
   padding-top: 32px;
+  transition: all .3s linear;
+  background-color: var(--white);
   @media screen and (max-width:991.98px) {
     height: 72px;
     padding-top: 0;
@@ -77,6 +79,30 @@ header {
           top: 2px;
         }
       }
+    }
+  }
+
+
+  &.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 0 10px 14px rgba(0,0,0,0.8);
+    padding-top: 0;
+    height: 72px;
+
+    .header{
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+    .brand{
+      margin-bottom: 0;
+    }
+    .navbar{
+      margin-left: auto;
     }
   }
 }

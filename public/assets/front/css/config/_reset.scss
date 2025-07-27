@@ -31,6 +31,8 @@ h6 {
   font-size: 1em;
   font-weight: normal;
 }
+html{
+}
 html,body{
   min-height: 100vh;
   background-color:#ffffff;
@@ -44,6 +46,7 @@ body{
   font-style: normal;
   overflow-x: hidden;
   background-color: #ffffff;
+   scroll-behavior: smooth;
 
   // &::-webkit-scrollbar{
   //   background-color: transparent;

@@ -31,8 +31,11 @@
     }
   }
   .loaderText {
-    font-size: 24px;
-    color: var(--primary);
+    font-size: 80px;
+    color: var(--white);
+    @media screen and (max-width:991.98px) {
+      font-size: 40px;
+    }
   }
 }
 @keyframes animloader {

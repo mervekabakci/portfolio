@@ -45,6 +45,7 @@ body {
   font-style: normal;
   overflow-x: hidden;
   background-color: #ffffff;
+  scroll-behavior: smooth;
 }
 
 /* Links */
@@ -591,8 +592,13 @@ video {
   animation: animloader 10s ease-in infinite;
 }
 .preloader .loaderText {
-  font-size: 24px;
-  color: var(--primary);
+  font-size: 80px;
+  color: var(--white);
+}
+@media screen and (max-width: 991.98px) {
+  .preloader .loaderText {
+    font-size: 40px;
+  }
 }
 
 @keyframes animloader {
@@ -606,6 +612,8 @@ video {
 header {
   text-align: center;
   padding-top: 32px;
+  transition: all 0.3s linear;
+  background-color: var(--white);
 }
 @media screen and (max-width: 991.98px) {
   header {
@@ -689,6 +697,27 @@ header .navbarButton {
     transform: rotate(-45deg);
     top: 2px;
   }
+}
+header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  box-shadow: 0 10px 14px rgba(0, 0, 0, 0.8);
+  padding-top: 0;
+  height: 72px;
+}
+header.fixed .header {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+header.fixed .brand {
+  margin-bottom: 0;
+}
+header.fixed .navbar {
+  margin-left: auto;
 }
 
 footer {
@@ -1022,6 +1051,52 @@ section .sectionContent,
   }
 }
 
+.scroolingText {
+  padding: 50px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+@media screen and (max-width: 991.98px) {
+  .scroolingText {
+    padding: 30px 0;
+  }
+}
+.scroolingText ul {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  animation: scroll-left 15s linear infinite;
+}
+.scroolingText ul:hover {
+  animation-play-state: paused;
+  cursor: grab;
+}
+@media screen and (max-width: 991.98px) {
+  .scroolingText ul {
+    gap: 30px;
+  }
+}
+.scroolingText ul li {
+  font-size: 100px;
+  line-height: 120px;
+  color: var(--white);
+}
+@media screen and (max-width: 991.98px) {
+  .scroolingText ul li {
+    font-size: 42px;
+    line-height: 56px;
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translate(100%);
+  }
+  100% {
+    transform: translate(-100%);
+  }
+}
 @media screen and (max-width: 991.98px) {
   body.opened .mainMobile {
     transition: all 0.3s linear;

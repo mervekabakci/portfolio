@@ -36,7 +36,7 @@
 </head>
 <body>
     <div class="preloader">
-        Yükleniyor...
+        <div class="loaderText">Yükleniyor...</div>
     </div>
     <header>
         <div class="container header">
@@ -46,19 +46,21 @@
             </a>
             <div class="navbar">
                 <ul class="nav">
-                    <li class="navItem"><a class="navLink active" href="#">Anasayfa</a></li>
-                    <li class="navItem"><a class="navLink" href="#">Projelerim</a></li>
-                    <li class="navItem"><a class="navLink" href="#">Uzmanlık</a></li>
-                    <li class="navItem"><a class="navLink" href="#">İletişim</a></li>
+                    <li class="navItem"><a class="navLink anchorLink active" href="#anasayfa">Anasayfa</a></li>
+                    <li class="navItem"><a class="navLink anchorLink" href="#projeler">Projelerim</a></li>
+                    <li class="navItem"><a class="navLink anchorLink" href="#uzmanlik">Uzmanlık</a></li>
+                    <li class="navItem"><a class="navLink anchorLink" href="#iletisim">İletişim</a></li>
                 </ul>
+            </div>
+            <div class="themeButton">
+                
             </div>
         </div>
     </header>
     <div class="mainMobile">
         <div class="main">
-            <section class="homeSection">
+            <section id="anasayfa" class="homeSection">
                 <div class="container">
-
                     <h1>
                         <b>Frontend Developer</b>
                     </h1>
@@ -74,7 +76,7 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section id="projeler">
                 <div class="container">
                     <div class="sectionHead">
                         <div class="sectionLeft">
@@ -150,7 +152,7 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section id="uzmanlik">
                 <div class="sectionHead">
                     <div class="container">
                         <div class="sectionTitle">
@@ -159,26 +161,30 @@
                     </div>
                 </div>
                 <div class="sectionContent bg-black">
-                    <div class="container">
-                        <div class="cards">
-                            <div class="card">
+                    <div class="scroolingText">
+                        <ul>
+                            <li>
                                 HTML
-                            </div>
-                            <div class="card">
+                            </li>
+                            <li>
                                 CSS
-                            </div>
-                            <div class="card">
+                            </li>
+                            <li>
                                 Javascript
-                            </div>
-                            <div class="card">
+                            </li>
+                            <li>
                                 React.js
-                            </div>
-                        </div>
+                            </li>
+                            <li>Sass</li>
+                            <li>
+                                Bootstrap
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
         </div>
-        <footer>
+        <footer id="iletisim">
             <div class="container">
                 <div class="footer">
                     <h2>Birlikte Üretelim!</h2>
