@@ -1,0 +1,35 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  .cardTop {
+    width: 100%;
+    background-color: var(--gray-100);
+    aspect-ratio: 1/1;
+    border-radius: 32px;
+    overflow: hidden;
+  }
+  .cardBody {
+    padding-top: 20px;
+    .cardTitle {
+        font-size: 20px;
+        line-height: 27px;
+        font-weight: 600;
+        color: var(--black);
+    }
+    .cardText{
+        font-size: 20px;
+        line-height: 27px;
+        color: var(--black);
+        font-weight: 500;
+    }
+  }
+  &.half {
+    gap:48px 32px;
+    .card {
+      width: calc(50% - 16px);
+      @media screen and (max-width:576px) {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -85,6 +85,7 @@ section,
   }
 
   .sectionHead {
+    padding-bottom: 20px;
     .sectionTitle {
       font-size: 48px;
       line-height: 56px;
@@ -106,5 +107,8 @@ section,
         line-height: 21px;
       }
     }
+  }
+  .sectionContent {
+    padding-top: 25px;
   }
 }
