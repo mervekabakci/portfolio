@@ -37,15 +37,20 @@ const anchorLinks = document.querySelectorAll(".anchorLink");
 
 anchorLinks.forEach((anchorLink) => {
   anchorLink.addEventListener("click", (event) => {
-    anchorLinks.forEach(link => link.classList.remove("active"));
+    anchorLinks.forEach((link) => link.classList.remove("active"));
     anchorLink.classList.add("active");
 
     const href = anchorLink.getAttribute("href");
     const targetElem = document.querySelector(href);
 
+    if (window.innerWidth < 992) {
+      body.classList.remove("opened");
+      navButton.classList.remove("active");
+      navMenu.classList.remove("opened");
+    }
     if (targetElem) {
       event.preventDefault();
-      targetElem.scrollIntoView({behavior: "smooth"});
+      targetElem.scrollIntoView({ behavior: "smooth" });
     }
     console.log(href);
   });
