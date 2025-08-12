@@ -7,13 +7,13 @@ window.onload = () => {
 //Mobile Menu
 const body = document.querySelector("body");
 const navMenu = document.querySelector(".navbar");
-const navButton = document.querySelector(".navbarButton");
-function handleClickMenu() {
-  this.classList.toggle("active");
-  navMenu.classList.toggle("opened");
-  // body.classList.toggle("opened");
-}
-navButton.addEventListener("click", handleClickMenu);
+// const navButton = document.querySelector(".navbarButton");
+// function handleClickMenu() {
+//   this.classList.toggle("active");
+//   navMenu.classList.toggle("opened");
+//   // body.classList.toggle("opened");
+// }
+// navButton.addEventListener("click", handleClickMenu);
 //Mobile Menu End
 
 //window scroll
@@ -56,6 +56,8 @@ anchorLinks.forEach((anchorLink) => {
 
 
 //sayfayı scroll ettıgımızde gorunen sectıona aıt ılgılı menu actıve olur
+//Observer gözlemci anlamına gelir ve tarayıcıda görünen elementler uzerınde rahatlıkla kontrol edıp ıslemler yapabılırız.
+//modern javascriptte her scroll olayında elle hesap yapmak yerıne observer kullanmak daha performanslı calısır.
 const sections = document.querySelectorAll("section");
 
 const options = {
