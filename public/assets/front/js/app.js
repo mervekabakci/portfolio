@@ -11,7 +11,7 @@ const navButton = document.querySelector(".navbarButton");
 function handleClickMenu() {
   this.classList.toggle("active");
   navMenu.classList.toggle("opened");
-  body.classList.toggle("opened");
+  // body.classList.toggle("opened");
 }
 navButton.addEventListener("click", handleClickMenu);
 //Mobile Menu End
@@ -22,13 +22,11 @@ function handleScroll() {
   //window scroll header fixed
   const header = document.querySelector("header");
   const headerH = header.offsetHeight;
-
   window.scrollY > headerH
     ? header.classList.add("fixed")
     : header.classList.remove("fixed");
   //window scroll header fixed end
-
-  console.log(headerH);
+  // console.log(headerH);
 }
 window.addEventListener("scroll", handleScroll);
 //window scroll end
@@ -54,4 +52,39 @@ anchorLinks.forEach((anchorLink) => {
     }
     console.log(href);
   });
+});
+
+
+//sayfayı scroll ettıgımızde gorunen sectıona aıt ılgılı menu actıve olur
+const sections = document.querySelectorAll("section");
+
+const options = {
+  root: null,
+  threshold: 0,
+  rootMargin: "-150px",
+};
+
+const observer = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    const entryId = `#${entry.target.getAttribute("id")}`;
+    console.log(entryId);
+    anchorLinks.forEach((ancLink) => {
+      console.log(ancLink.getAttribute("href"));
+      const linkHref = ancLink.getAttribute("href");
+      ancLink.classList.remove("active");
+      if (entryId === linkHref) {
+        ancLink.classList.add("active");
+      } 
+    });
+
+    entry.target.classList.toggle("inverse");
+    observer.unobserve(entry.target);
+  });
+}, options);
+
+sections.forEach((section) => {
+  observer.observe(section);
 });
