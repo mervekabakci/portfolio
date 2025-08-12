@@ -754,6 +754,11 @@ header .otherMenu {
   align-items: center;
   gap: 40px;
 }
+@media screen and (max-width: 991.98px) {
+  header .otherMenu {
+    position: relative;
+  }
+}
 header .socialMedia {
   display: flex;
   align-items: center;
@@ -781,7 +786,10 @@ header.fixed .brand {
   margin-bottom: 0;
 }
 header.fixed .navbar {
-  margin-left: auto;
+  margin: 0 auto;
+}
+header.fixed .otherMenu {
+  position: relative;
 }
 
 .themeButton {

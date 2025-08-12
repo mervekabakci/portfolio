@@ -91,6 +91,9 @@ header {
     display: flex;
     align-items: center;
     gap: 40px;
+    @media screen and (max-width:991.98px) {
+      position: relative;
+    }
   }
   .socialMedia{
     display: flex;
@@ -120,7 +123,10 @@ header {
       margin-bottom: 0;
     }
     .navbar {
-      margin-left: auto;
+      margin: 0 auto;
+    }
+    .otherMenu{
+      position: relative;
     }
   }
 }
