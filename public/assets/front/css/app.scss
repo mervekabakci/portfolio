@@ -1,5 +1,6 @@
 @use "config/index" as config;
 @use "components/index" as components;
+@use "theme/index" as theme;
 
 body {
   &.opened {

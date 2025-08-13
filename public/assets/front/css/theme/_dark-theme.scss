@@ -1,0 +1,77 @@
+.dark-theme {
+  background-color: var(--black);
+  header {
+    background-color: var(--black);
+    .brand {
+      color: var(--white);
+    }
+    &.fixed{
+        background-color: var(--primary-200);
+    }
+  }
+  .navbar {
+    .nav {
+      background-color: var(--primary-400);
+      .navItem {
+        .navLink {
+          &.active {
+          }
+        }
+      }
+    }
+  }
+  .socialMedia{
+    .customIcon{
+        color: var(--white);
+    }
+  }
+  section,
+  .section {
+    &.homeSection {
+      background-color: var(--black);
+
+      h1{
+        color: var(--white);
+      }
+      .sectionBottom{
+        color: var(--white);
+      }
+    }
+    .sectionHead{
+        .sectionTitle{
+            color: var(--white);
+        }
+        p{
+            color: var(--white);
+        }
+    }
+  }
+
+  .cards{
+    .cardBody{
+        .cardTitle{
+            color: var(--white);
+        }
+        .cardText{
+            color: var(--white);
+        }
+    }
+  }
+  .scroolingText{
+    ul{
+        li{
+            color: var(--black);
+        }
+    }
+  }
+  footer{
+    .footer{
+        h2{
+            color: var(--white);
+        }
+    }
+    .footerBottom{
+        color: var(--white);
+    }
+  }
+}

@@ -16,6 +16,25 @@ const navMenu = document.querySelector(".navbar");
 // navButton.addEventListener("click", handleClickMenu);
 //Mobile Menu End
 
+//theme button action start
+const themeButton = document.querySelector(".themeButton");
+const blackContains = document.querySelectorAll(".bg-black");
+const darkFixBtns = document.querySelectorAll(".button-black");
+themeButton.addEventListener("click", function(){
+  this.classList.toggle("dark");
+  body.classList.toggle("dark-theme");
+  blackContains.forEach((blackContain) => {
+    blackContain.classList.remove("bg-black");
+    blackContain.classList.add("bg-white");
+  })
+  darkFixBtns.forEach((darkFixBtn) => {
+    darkFixBtn.classList.remove("button-black");
+    darkFixBtn.classList.add("button-light");
+  })
+})
+//theme button action end
+
+
 //window scroll
 let lastScrollY = window.scrollY;
 function handleScroll() {
@@ -83,7 +102,7 @@ const observer = new IntersectionObserver(function (entries, observer) {
     });
 
     entry.target.classList.toggle("inverse");
-    observer.unobserve(entry.target);
+    // observer.unobserve(entry.target); bu kod eklendıgınde scroll takıp tek sefer calıstıgı ıcın menude etkili dogru calısmıyor. o yuzden burayı gızlıyoruz.
   });
 }, options);
 

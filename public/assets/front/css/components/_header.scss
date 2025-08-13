@@ -91,17 +91,8 @@ header {
     display: flex;
     align-items: center;
     gap: 40px;
-    @media screen and (max-width:991.98px) {
+    @media screen and (max-width: 991.98px) {
       position: relative;
-    }
-  }
-  .socialMedia{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    .customIcon{
-      font-size: 26px;
     }
   }
   &.fixed {
@@ -125,12 +116,21 @@ header {
     .navbar {
       margin: 0 auto;
     }
-    .otherMenu{
+    .otherMenu {
       position: relative;
     }
   }
 }
-.themeButton{
+.socialMedia {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .customIcon {
+    font-size: 26px;
+  }
+}
+.themeButton {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,7 +140,7 @@ header {
   width: 40px;
   height: 40px;
   cursor: pointer;
-  .customIcon{
+  .customIcon {
     font-size: 24px;
   }
 }

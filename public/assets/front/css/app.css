@@ -256,14 +256,14 @@ video {
 }
 
 .button-white {
-  background-color: var(--whit) !important;
-  border: 1px solid var(--whit) !important;
+  background-color: var(--white) !important;
+  border: 1px solid var(--white) !important;
   color: var(--white) !important;
 }
 @media screen and (min-width: 992px) {
   .button-white:hover {
     background-color: var(--white) !important;
-    color: var(--whit) !important;
+    color: var(--white) !important;
   }
 }
 
@@ -440,7 +440,7 @@ video {
 }
 
 .bg-white {
-  background-color: var(--whit);
+  background-color: var(--white);
 }
 
 .bg-gray-50 {
@@ -759,14 +759,6 @@ header .otherMenu {
     position: relative;
   }
 }
-header .socialMedia {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-header .socialMedia .customIcon {
-  font-size: 26px;
-}
 header.fixed {
   position: fixed;
   top: 0;
@@ -790,6 +782,15 @@ header.fixed .navbar {
 }
 header.fixed .otherMenu {
   position: relative;
+}
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.socialMedia .customIcon {
+  font-size: 26px;
 }
 
 .themeButton {
@@ -1176,6 +1177,60 @@ section .sectionContent,
     transform: translate(-100%);
   }
 }
+.dark-theme {
+  background-color: var(--black);
+}
+.dark-theme header {
+  background-color: var(--black);
+}
+.dark-theme header .brand {
+  color: var(--white);
+}
+.dark-theme header.fixed {
+  background-color: var(--primary-200);
+}
+.dark-theme .navbar .nav {
+  background-color: var(--primary-400);
+}
+.dark-theme .socialMedia .customIcon {
+  color: var(--white);
+}
+.dark-theme section.homeSection,
+.dark-theme .section.homeSection {
+  background-color: var(--black);
+}
+.dark-theme section.homeSection h1,
+.dark-theme .section.homeSection h1 {
+  color: var(--white);
+}
+.dark-theme section.homeSection .sectionBottom,
+.dark-theme .section.homeSection .sectionBottom {
+  color: var(--white);
+}
+.dark-theme section .sectionHead .sectionTitle,
+.dark-theme .section .sectionHead .sectionTitle {
+  color: var(--white);
+}
+.dark-theme section .sectionHead p,
+.dark-theme .section .sectionHead p {
+  color: var(--white);
+}
+.dark-theme .cards .cardBody .cardTitle {
+  color: var(--white);
+}
+.dark-theme .cards .cardBody .cardText {
+  color: var(--white);
+}
+.dark-theme .scroolingText ul li {
+  color: var(--black);
+}
+.dark-theme footer .footer h2 {
+  color: var(--white);
+}
+.dark-theme footer .footerBottom {
+  color: var(--white);
+}
+
 @media screen and (max-width: 991.98px) {
   body.opened .mainMobile {
     transition: all 0.3s linear;
