@@ -23,9 +23,10 @@ section,
     h1 {
       font-size: 220px;
       line-height: 156px;
-      letter-spacing: 9px;
-      text-indent: 82px;
+      letter-spacing: -12px;
       text-align: center;
+      font-weight: 700;
+      cursor: nwse-resize;
       @media screen and (max-width: 1600px) {
         font-size: 190px;
       }
@@ -35,6 +36,31 @@ section,
         letter-spacing: 9px;
         text-indent: 26px;
         text-align: center;
+      }
+      span {
+        @for $i from 1 through 17 {
+          &:nth-child(#{$i}) {
+            transform: translateY(-50px);
+            position: relative;
+            opacity: 0;
+            visibility: hidden;
+            display: inline-flex;
+            animation: letterAnim 0.3s linear forwards;
+            animation-delay: $i * 0.1s;
+          }
+        }
+      }
+      @keyframes letterAnim {
+        0% {
+          transform: translateY(-50%);
+          opacity: 0;
+          visibility: hidden;
+        }
+        100% {
+          transform: translate(0);
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
     .scrollDownButton {
@@ -86,6 +112,11 @@ section,
 
   .sectionHead {
     padding-bottom: 20px;
+    display: flex;
+    align-items: flex-end;
+    &.middle{
+      align-items: center;
+    }
     .sectionTitle {
       font-size: 48px;
       line-height: 56px;
@@ -106,6 +137,9 @@ section,
         font-size: 14px;
         line-height: 21px;
       }
+    }
+    .textLink{
+      margin-left: auto;
     }
   }
   .sectionContent {

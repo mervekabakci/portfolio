@@ -74,4 +74,16 @@
         color: var(--white);
     }
   }
+
+  .textLink{
+    color: var(--white);
+    &:before{
+      background-color: var(--white);
+    }
+    @media screen and (min-width:992px) {
+      &:hover{
+        color: var(--primary-500);
+      }
+    }
+  }
 }

@@ -7,13 +7,6 @@ window.onload = () => {
 //Mobile Menu
 const body = document.querySelector("body");
 const navMenu = document.querySelector(".navbar");
-// const navButton = document.querySelector(".navbarButton");
-// function handleClickMenu() {
-//   this.classList.toggle("active");
-//   navMenu.classList.toggle("opened");
-//   // body.classList.toggle("opened");
-// }
-// navButton.addEventListener("click", handleClickMenu);
 //Mobile Menu End
 
 //theme button action start
@@ -45,7 +38,6 @@ function handleScroll() {
     ? header.classList.add("fixed")
     : header.classList.remove("fixed");
   //window scroll header fixed end
-  // console.log(headerH);
 }
 window.addEventListener("scroll", handleScroll);
 //window scroll end
@@ -109,3 +101,8 @@ const observer = new IntersectionObserver(function (entries, observer) {
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+
+AOS.init({
+  once: true,
+}); 
