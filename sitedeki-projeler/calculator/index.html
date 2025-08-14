@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+    <title>Hesap Makinesi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/calculator.min.css">
+    <link rel="stylesheet" href="assets/css/dark.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="calcHead">
+                <div class="calcTitle">Hesap Makinesi</div>
+                <a href="#" class="themeButton"></a>
+            </div>
+            <div class="calcFrame">
+                <div class="calcInputWrapper">
+                    <div id="resultProcess">0</div>
+                    <input type="text" id="calcInput" class="calcInput">
+                    <label for="" id="lblError"></label>
+                </div>
+                <div class="calculatorWrapper">
+                    <div class="numbers"></div>
+                    <div class="calcButtons">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/calculator.js" defer></script>
+</body>
+</html>

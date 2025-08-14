@@ -1,0 +1,11 @@
+.darkTheme{
+    background-color: var(--gray-color);
+    .calculator{
+        background-color: var(--primary-color);
+        .calcInputWrapper{
+            #resultProcess{
+                color: var(--white-color);
+            }
+        }
+    }
+}

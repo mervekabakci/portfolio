@@ -110,6 +110,13 @@ $colors: (
       height: 12px;
     }
   }
+  &.med{
+    padding: 0 16px;
+    height: 45px;
+    font-size: 15px;
+    min-width: 120px;
+    font-weight: 600;
+  }
   .icon-arrow {
     transition: all 0.3s linear;
     &:before {
