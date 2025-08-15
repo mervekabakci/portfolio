@@ -33,7 +33,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="public/assets/front/css/app.css">
+    <!-- <link rel="stylesheet" href="public/assets/front/css/app.css"> -->
+    <script>
+        const version = Date.now(); // her yüklemede farklı olur
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'public/assets/front/css/app.css?v=' + version;
+        document.head.appendChild(link);
+    </script>
 </head>
 <body>
     <div class="preloader">
@@ -231,11 +238,11 @@
                 </div>
             </section>
         </div>
-        <footer id="iletisim">
+        <footer id="iletisim" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
             <div class="container">
                 <div class="footer">
-                    <h2 data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">Birlikte Üretelim!</h2>
-                    <a data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" class="fixBtn button-black" href="mailto:mervedkabakci@gmail.com"><span>mervedkabakci@gmail.com</span> <span class="icon-arrow "></span></a>
+                    <h2>Birlikte Üretelim!</h2>
+                    <a class="fixBtn button-black" href="mailto:mervedkabakci@gmail.com"><span>mervedkabakci@gmail.com</span> <span class="icon-arrow "></span></a>
                 </div>
                 <div class="footerBottom">
                     <div class="copyRight">2013 © — Merve Kabakcı</div>

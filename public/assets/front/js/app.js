@@ -13,20 +13,38 @@ const navMenu = document.querySelector(".navbar");
 const themeButton = document.querySelector(".themeButton");
 const blackContains = document.querySelectorAll(".bg-black");
 const darkFixBtns = document.querySelectorAll(".button-black");
-themeButton.addEventListener("click", function(){
-  this.classList.toggle("dark");
-  body.classList.toggle("dark-theme");
+themeButton.addEventListener("click", function () {
+  const isDark = body.classList.toggle("dark-theme");
+
+  if (isDark) {
+    this.classList.add("dark");
+    blackContains.forEach((blackContain) => {
+      blackContain.classList.remove("bg-black");
+      blackContain.classList.add("bg-white");
+    });
+    darkFixBtns.forEach((darkFixBtn) => {
+      darkFixBtn.classList.remove("button-black");
+      darkFixBtn.classList.add("button-light");
+    });
+    localStorage.isDarkMode = true;
+  } else {
+    this.classList.remove("dark");
+    localStorage.isDarkMode = false;
+  }
+});
+if (localStorage.isDarkMode === "true") {
+  body.classList.add("dark-theme");
+  themeButton.classList.add("dark");
   blackContains.forEach((blackContain) => {
     blackContain.classList.remove("bg-black");
     blackContain.classList.add("bg-white");
-  })
+  });
   darkFixBtns.forEach((darkFixBtn) => {
     darkFixBtn.classList.remove("button-black");
     darkFixBtn.classList.add("button-light");
-  })
-})
+  });
+}
 //theme button action end
-
 
 //window scroll
 let lastScrollY = window.scrollY;
@@ -61,10 +79,9 @@ anchorLinks.forEach((anchorLink) => {
       event.preventDefault();
       targetElem.scrollIntoView({ behavior: "smooth" });
     }
-    console.log(href);
+    // console.log(href);
   });
 });
-
 
 //sayfayı scroll ettıgımızde gorunen sectıona aıt ılgılı menu actıve olur
 //Observer gözlemci anlamına gelir ve tarayıcıda görünen elementler uzerınde rahatlıkla kontrol edıp ıslemler yapabılırız.
@@ -83,14 +100,14 @@ const observer = new IntersectionObserver(function (entries, observer) {
       return;
     }
     const entryId = `#${entry.target.getAttribute("id")}`;
-    console.log(entryId);
+    // console.log(entryId);
     anchorLinks.forEach((ancLink) => {
-      console.log(ancLink.getAttribute("href"));
+      // console.log(ancLink.getAttribute("href"));
       const linkHref = ancLink.getAttribute("href");
       ancLink.classList.remove("active");
       if (entryId === linkHref) {
         ancLink.classList.add("active");
-      } 
+      }
     });
 
     entry.target.classList.toggle("inverse");
@@ -102,7 +119,6 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
-
 AOS.init({
   once: true,
-}); 
+});

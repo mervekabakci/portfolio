@@ -87,13 +87,14 @@ header {
   }
   .otherMenu {
     position: absolute;
-    right: 0;
+    right: 30px;
     top: 0;
     display: flex;
     align-items: center;
     gap: 40px;
     @media screen and (max-width: 991.98px) {
       position: relative;
+      right: 0;
     }
   }
   &.fixed {
@@ -119,6 +120,7 @@ header {
     }
     .otherMenu {
       position: relative;
+      right: 0;
     }
   }
 }

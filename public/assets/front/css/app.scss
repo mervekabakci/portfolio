@@ -1,7 +1,10 @@
 @use "config/index" as config;
 @use "components/index" as components;
 @use "theme/index" as theme;
-
+.main {
+  position: relative;
+  overflow-x: hidden;
+}
 body {
   &.opened {
     .mainMobile {

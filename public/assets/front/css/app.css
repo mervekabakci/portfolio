@@ -833,7 +833,7 @@ header .navbarButton {
 }
 header .otherMenu {
   position: absolute;
-  right: 0;
+  right: 30px;
   top: 0;
   display: flex;
   align-items: center;
@@ -842,6 +842,7 @@ header .otherMenu {
 @media screen and (max-width: 991.98px) {
   header .otherMenu {
     position: relative;
+    right: 0;
   }
 }
 header.fixed {
@@ -867,6 +868,7 @@ header.fixed .navbar {
 }
 header.fixed .otherMenu {
   position: relative;
+  right: 0;
 }
 
 .socialMedia {
@@ -1649,6 +1651,11 @@ section .sectionContent,
   .dark-theme .textLink:hover {
     color: var(--primary-500);
   }
+}
+
+.main {
+  position: relative;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 991.98px) {
