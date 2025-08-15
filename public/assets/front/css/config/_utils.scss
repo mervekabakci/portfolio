@@ -141,7 +141,7 @@ $colors: (
 }
 .textLink {
   font-size: 16px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   color: var(--primary-500);
@@ -181,6 +181,11 @@ $colors: (
       font-family: "customFont";
       transform: translateX(-16px);
       transition: transform 0.3s ease-in;
+    }
+  }
+  &.rotateRevert{
+    .icon-arrow{
+      transform: rotate(180deg);
     }
   }
   @media screen and (min-width: 992px) {

@@ -97,6 +97,33 @@ header {
       right: 0;
     }
   }
+  &.light {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 0 10px 14px rgba(0, 0, 0, 0.8);
+    padding-top: 0;
+    height: 72px;
+
+    .header {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+    .brand {
+      margin-bottom: 0;
+    }
+    .navbar {
+      margin: 0 auto;
+    }
+    .otherMenu {
+      position: relative;
+      right: 0;
+      margin-left: auto;
+    }
+  }
   &.fixed {
     position: fixed;
     top: 0;

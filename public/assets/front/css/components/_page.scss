@@ -1,0 +1,14 @@
+.pageSection {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  @media screen and (max-width: 991.98px) {
+    padding-top: 30px;
+  }
+
+  .backButton {
+    margin-bottom: 50px;
+    @media screen and (max-width: 991.98px) {
+      margin-bottom: 20px;
+    }
+  }
+}

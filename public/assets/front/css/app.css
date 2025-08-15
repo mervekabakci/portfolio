@@ -557,7 +557,7 @@ video {
 
 .textLink {
   font-size: 16px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   color: var(--primary-500);
@@ -599,6 +599,9 @@ video {
   font-family: "customFont";
   transform: translateX(-16px);
   transition: transform 0.3s ease-in;
+}
+.textLink.rotateRevert .icon-arrow {
+  transform: rotate(180deg);
 }
 @media screen and (min-width: 992px) {
   .textLink:hover {
@@ -844,6 +847,32 @@ header .otherMenu {
     position: relative;
     right: 0;
   }
+}
+header.light {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  box-shadow: 0 10px 14px rgba(0, 0, 0, 0.8);
+  padding-top: 0;
+  height: 72px;
+}
+header.light .header {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+header.light .brand {
+  margin-bottom: 0;
+}
+header.light .navbar {
+  margin: 0 auto;
+}
+header.light .otherMenu {
+  position: relative;
+  right: 0;
+  margin-left: auto;
 }
 header.fixed {
   position: fixed;
@@ -1526,7 +1555,7 @@ section .sectionContent,
   }
 }
 .cards.third {
-  gap: 50px 40px;
+  gap: 70px 40px;
 }
 .cards.third .card {
   width: calc(33.3% - 27px);
@@ -1588,6 +1617,24 @@ section .sectionContent,
     transform: translate(-100%);
   }
 }
+.pageSection {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+@media screen and (max-width: 991.98px) {
+  .pageSection {
+    padding-top: 30px;
+  }
+}
+.pageSection .backButton {
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 991.98px) {
+  .pageSection .backButton {
+    margin-bottom: 20px;
+  }
+}
+
 .dark-theme {
   background-color: var(--black);
 }
