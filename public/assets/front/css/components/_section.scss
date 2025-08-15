@@ -44,29 +44,31 @@ section,
         letter-spacing: -1px;
         margin-bottom: 50px;
       }
-      span {
-        @for $i from 1 through 17 {
-          &:nth-child(#{$i}) {
-            transform: translateY(-50px);
-            position: relative;
-            opacity: 0;
-            visibility: hidden;
-            display: inline-flex;
-            animation: letterAnim 0.3s linear forwards;
-            animation-delay: $i * 0.1s;
+      &:not(.wait) {
+        span {
+          @for $i from 1 through 17 {
+            &:nth-child(#{$i}) {
+              transform: translateY(-50px);
+              position: relative;
+              opacity: 0;
+              visibility: hidden;
+              display: inline-flex;
+              animation: letterAnim 0.3s linear forwards;
+              animation-delay: $i * 0.1s;
+            }
           }
         }
-      }
-      @keyframes letterAnim {
-        0% {
-          transform: translateY(-50%);
-          opacity: 0;
-          visibility: hidden;
-        }
-        100% {
-          transform: translate(0);
-          opacity: 1;
-          visibility: visible;
+        @keyframes letterAnim {
+          0% {
+            transform: translateY(-50%);
+            opacity: 0;
+            visibility: hidden;
+          }
+          100% {
+            transform: translate(0);
+            opacity: 1;
+            visibility: visible;
+          }
         }
       }
     }
@@ -159,5 +161,11 @@ section,
   }
   .sectionContent {
     padding-top: 25px;
+    .centerContent {
+      display: flex;
+      align-items: center;
+      padding-top: 50px;
+      justify-content: center;
+    }
   }
 }

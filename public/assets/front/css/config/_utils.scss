@@ -8,6 +8,7 @@
   --primary-500: #151414;
   --primary-600: #0a0909;
   --primary-700: #030303;
+  --secondary:#fc8080;
   --black: #000000;
   --white: #ffffff;
 
@@ -36,6 +37,7 @@ $colors: (
   "primary-500": var(--primary-500),
   "primary-600": var(--primary-600),
   "primary-700": var(--primary-700),
+  "secondary": var(--secondary),
   "black": var(--black),
   "white": var(--white),
   "gray-50": var(--gray-50),

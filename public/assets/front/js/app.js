@@ -1,6 +1,9 @@
 //Window load
 window.onload = () => {
   document.querySelector(".preloader").remove();
+  if (document.querySelector(".homeSection")) {
+    document.querySelector(".homeSection h1").classList.remove("wait");
+  }
 };
 //Window load end
 
@@ -121,4 +124,62 @@ sections.forEach((section) => {
 
 AOS.init({
   once: true,
+});
+
+if (typeof jQuery !== "undefined") {
+  $(document).ready(function () {
+    //custom niceselect initialiaze start
+    $(".customSelect").niceSelect();
+    // const categorySelect = $(".categorySelect");
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  //projelerı filtreleme baslangıc
+  const projectItems = document.querySelectorAll(".projectCards .card");
+
+  document
+    .querySelectorAll(".nice-select.categorySelect .option")
+    .forEach((option) => {
+      option.addEventListener("click", function () {
+        const selectedValue = this.getAttribute("data-value");
+        console.log("secilen:", selectedValue);
+
+        projectItems.forEach((projectItem) => {
+          const projectCategory = projectItem.getAttribute("data-category");
+
+          if (selectedValue === "" || projectCategory === selectedValue) {
+            projectItem.style.display = "";
+          } else {
+            projectItem.style.display = "none";
+          }
+        });
+      });
+    });
+  //projelerı filtreleme bitiş
+
+  //daha fazla göster
+  const moreProjectButton = document.querySelector(".moreProjectButton");
+  const projectLength = projectItems.length;
+  let limit = 6;
+  const skip = 6;
+  projectItems.forEach((projectItem, index) => {
+    if (index < limit) {
+      projectItem.style.display = "";
+    } else {
+      projectItem.style.display = "none";
+    }
+  });
+  moreProjectButton.addEventListener("click", function () {
+    limit += skip;
+
+    projectItems.forEach((projectItem, index) => {
+      if (index < limit) {
+        projectItem.style.display = "";
+      }
+      if (limit >= projectLength) {
+        moreProjectButton.style.display = "none";
+      }
+    });
+  });
 });

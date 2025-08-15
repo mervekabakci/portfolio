@@ -33,6 +33,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="public/assets/plugin/niceselect/nice-select.css" />
     <!-- <link rel="stylesheet" href="public/assets/front/css/app.css"> -->
     <script>
         const version = Date.now(); // her yüklemede farklı olur
@@ -48,17 +49,17 @@
     </div>
     <header class="light">
         <div class="container header">
-            <div class="brand" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">Merve Kabakcı</div>
+            <a href="/" class="brand" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">Merve Kabakcı</a>
             <!-- <a href="#" class="navbarButton">
                 <span class="line"></span>
             </a> -->
-            <!-- <div class="navbar">
+            <div class="navbar">
                 <ul class="nav" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-                    <li class="navItem"><a class="navLink anchorLink active" href="#anasayfa">Anasayfa</a></li>
-                    <li class="navItem"><a class="navLink anchorLink" href="#projeler">Projelerim</a></li>
-                    <li class="navItem"><a class="navLink anchorLink" href="#uzmanlik">Uzmanlık</a></li>
+                    <li class="navItem"><a class="navLink anchorLink active" href="/">Anasayfa'ya Dön</a></li>
+                    <!-- <li class="navItem"><a class="navLink anchorLink" href="#projeler">Projelerim</a></li>
+                    <li class="navItem"><a class="navLink anchorLink" href="#uzmanlik">Uzmanlık</a></li> -->
                 </ul>
-            </div> -->
+            </div>
             <div class="otherMenu" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
                 <div class="socialMedia">
                     <a href="https://github.com/mervekabakci" target="_blank"><span class="icon-github customIcon"></span></a>
@@ -74,7 +75,7 @@
         <div class="main">
             <section class="pageSection">
                 <div class="container">
-                    <a href="index.html" class="textLink rotateRevert backButton"><span class="icon-arrow"></span> <span>Geri Dön</span></a>
+                    <!-- <a href="index.html" class="textLink rotateRevert backButton"><span class="icon-arrow"></span> <span>Geri Dön</span></a> -->
                     <div class="sectionHead">
                         <div class="sectionLeft">
                             <div class="sectionTitle" data-aos="fade-right" data-aos-delay="100" data-aos-duration="2000">
@@ -82,11 +83,20 @@
                             </div>
                             <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Farklı alanlarda geliştirdiğim çalışmalarım ve web projelerimden seçkilere göz atabilirsiniz.</p>
                         </div>
+                        <div class="selectColumn">
+                            <select name="categorySelect" class="customSelect categorySelect" id="categorySelect">
+                                <option value="">Tüm Projeler</option>
+                                <option value="gelistirme">Geliştirme Projeleri</option>
+                                <option value="freelance">Freelance Projeler</option>
+                                <option value="ekip">Ekip Projeleri / Bireysel</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="sectionContent">
-                        <div class="cards third">
-                            <div class="card" data-aos="flip-right" data-aos-delay="100" data-aos-duration="1000">
+                        <div class="cards third projectCards">
+                            <div class="card" data-category="gelistirme">
                                 <div class="cardTop">
+                                    <span class="category">Geliştirme Projesi</span>
                                     <div class="imageWrapper cover">
                                         <img src="public/assets/images/media/projects/yapilacaklar-listesi.png" alt="Yapılacaklar Listesi">
                                     </div>
@@ -103,8 +113,7 @@
                                             Todo List
                                         </div>
                                         <div class="cardText">
-                                            Geliştirme Projesidir.
-                                            React.js ile kodlanmıştır. Geliştirme aşamasındadır.
+                                            React.js ile geliştirilmiş bir yapılacaklar listesi uygulaması. Kullanıcıların görev ekleyip yönetebileceği dinamik bir arayüze sahiptir. Hâlen geliştirme aşamasındadır.
                                         </div>
                                     </div>
                                     <div class="tags">
@@ -115,8 +124,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card" data-aos="flip-right" data-aos-delay="200" data-aos-duration="1500">
+                            <div class="card" data-category="gelistirme">
                                 <div class="cardTop">
+                                    <span class="category">Geliştirme Projesi</span>
                                     <div class="imageWrapper cover">
                                         <img src="public/assets/images/media/projects/hesap-makinesi.png" alt="Hesap Makinesi">
                                     </div>
@@ -133,8 +143,7 @@
                                             Hesap Makinesi
                                         </div>
                                         <div class="cardText">
-                                            Geliştirme Projesidir.
-                                            Javascript kullanılarak kodlaması yapılmıştır. Geliştirme aşamasındadır.
+                                            JavaScript ile geliştirilmiş, temel matematiksel işlemleri yapabilen modern bir hesap makinesi. Minimalist tasarımı ve sade arayüzü ile kolay kullanım sunar. Geliştirme aşamasındadır.
                                         </div>
                                     </div>
                                     <div class="tags">
@@ -144,8 +153,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card" data-aos="flip-right" data-aos-delay="300" data-aos-duration="2000">
+                            <div class="card" data-category="freelance">
                                 <div class="cardTop">
+                                    <span class="category">Freelance</span>
                                     <div class="imageWrapper cover">
                                         <img src="public/assets/images/media/projects/iscimenhotel.png" alt="İşçimen Hotel">
                                     </div>
@@ -161,8 +171,7 @@
                                             İşçimen Hotel
                                         </div>
                                         <div class="cardText">
-                                            Freelance çalışma.
-                                            HTML, CSS ve Javascript kodlamaları yapıldı.
+                                            Bir otel web sitesi için HTML, CSS ve JavaScript kullanılarak oluşturulmuş modern ve responsive bir tasarım. Kullanıcıların otel bilgilerine hızlıca ulaşmasını sağlar.
                                         </div>
                                     </div>
                                     <div class="tags">
@@ -172,8 +181,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card" data-aos="flip-right" data-aos-delay="400" data-aos-duration="2500">
+                            <div class="card" data-category="freelance">
                                 <div class="cardTop">
+                                    <span class="category">Freelance</span>
                                     <div class="imageWrapper cover">
                                         <img src="public/assets/images/media/projects/egebilim.png" alt="EgeBilim Okulları">
                                     </div>
@@ -189,8 +199,7 @@
                                             EgeBilim Okulları
                                         </div>
                                         <div class="cardText">
-                                            Freelance çalışma.
-                                            HTML, CSS ve Javascript kodlamaları yapıldı.
+                                            Freelance olarak geliştirilen bu proje, bir eğitim kurumunun web sitesi için hazırlanmıştır. HTML, CSS ve JavaScript ile kullanıcı dostu bir arayüz sunar.
                                         </div>
                                     </div>
                                     <div class="tags">
@@ -200,8 +209,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card" data-aos="flip-right" data-aos-delay="500" data-aos-duration="3000">
+                            <div class="card" data-category="ekip">
                                 <div class="cardTop">
+                                    <span class="category">Ekip / Bireysel</span>
                                     <div class="imageWrapper cover">
                                         <img src="public/assets/images/media/projects/herbandmore.png" alt="Herb&More">
                                     </div>
@@ -217,7 +227,7 @@
                                             Herb&More
                                         </div>
                                         <div class="cardText">
-                                            HTML, CSS ve Javascript kodlamaları yapıldı.
+                                            Doğal ürünlerin tanıtımı ve satışı için tasarlanmış web sitesi. HTML, CSS ve JavaScript kullanılarak responsive ve şık bir tasarım ile kodlanmıştır.
                                         </div>
                                     </div>
                                     <div class="tags">
@@ -227,8 +237,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card" data-aos="flip-right" data-aos-delay="600" data-aos-duration="3500">
+                            <div class="card" data-category="ekip">
                                 <div class="cardTop">
+                                    <span class="category">Ekip / Bireysel</span>
                                     <div class="imageWrapper cover">
                                         <img src="public/assets/images/media/projects/psikolojik-sozluk.png" alt="Psikolojik Sözlük">
                                     </div>
@@ -244,7 +255,7 @@
                                             Psikolojik Sözlük
                                         </div>
                                         <div class="cardText">
-                                            HTML, CSS ve Javascript kodlamaları yapıldı.
+                                            Psikoloji alanında terimlerin açıklamalarına yer veren, HTML, CSS ve JavaScript ile geliştirilmiş interaktif bir sözlük projesi.
                                         </div>
                                     </div>
                                     <div class="tags">
@@ -254,8 +265,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card" data-category="ekip">
                                 <div class="cardTop">
+                                    <span class="category">Ekip / Bireysel</span>
                                     <div class="imageWrapper cover">
                                         <img src="public/assets/images/media/projects/turkiye-yuzyili.png" alt="Türkiye Yüzyılı">
                                     </div>
@@ -271,7 +283,7 @@
                                             Türkiye Yüzyılı
                                         </div>
                                         <div class="cardText">
-                                            HTML, CSS ve Javascript kodlamaları yapıldı.
+                                            Türkiye Yüzyılı projesi, HTML, CSS ve JavaScript kullanılarak geliştirilmiş bir web sitesidir. Kullanıcı dostu ve interaktif bir arayüz sunar.
                                         </div>
                                     </div>
                                     <div class="tags">
@@ -281,8 +293,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card" data-category="ekip">
                                 <div class="cardTop">
+                                    <span class="category">Ekip / Bireysel</span>
                                     <div class="imageWrapper cover">
                                         <img src="public/assets/images/media/projects/akparti-il-istanbul.png" alt="Ak Parti İstanbul İl Başkanlığı">
                                     </div>
@@ -298,7 +311,7 @@
                                             Ak Parti İstanbul İl Başkanlığı
                                         </div>
                                         <div class="cardText">
-                                            HTML, CSS ve Javascript kodlamaları ve Laravel Entegrasyonu yapıldı.
+                                            Ak Parti İstanbul İl Başkanlığı web sitesi, HTML, SCSS ve JavaScript ile frontend geliştirmesi yapılan ve Laravel entegrasyonu yapılan bir projedir. Site, kullanıcı deneyimine uygun şekilde tasarlanmıştır.
                                         </div>
                                     </div>
                                     <div class="tags">
@@ -308,8 +321,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card" data-category="ekip">
                                 <div class="cardTop">
+                                    <span class="category">Ekip / Bireysel</span>
                                     <div class="imageWrapper cover">
                                         <img src="public/assets/images/media/projects/canakkale-tarihi-alan.png" alt="Çanakkale Savaşları Gelibolu Tarihi Alan Başkanlığı">
                                     </div>
@@ -325,7 +339,7 @@
                                             Çanakkale Savaşları Gelibolu Tarihi Alan Başkanlığı - 2022
                                         </div>
                                         <div class="cardText">
-                                            HTML, CSS ve Javascript kodlamaları ve Laravel Entegrasyonu yapıldı.
+                                            Çanakkale Savaşları Gelibolu Tarihi Alan Başkanlığı için hazırlanan bu proje, HTML, SCSS ve JavaScript ile frontend geliştirmesi yapılan, Laravel entegrasyonu ile desteklenen bir web sitesidir.
                                         </div>
                                     </div>
                                     <div class="tags">
@@ -335,8 +349,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card" data-category="freelance">
                                 <div class="cardTop">
+                                    <span class="category">Freelance</span>
                                     <div class="imageWrapper cover">
                                         <img src="public/assets/images/media/projects/zonguldak-maden-muzesi.png" alt="İşçimen Hotel">
                                     </div>
@@ -352,7 +367,7 @@
                                             Zonguldak Maden Müzesi - 2021 - Frelance
                                         </div>
                                         <div class="cardText">
-                                            HTML, CSS ve Javascript kodlamaları yapıldı.
+                                            Zonguldak Maden Müzesi web sitesi, HTML, CSS ve JavaScript kullanılarak frontend kısmı geliştirilmiş ve responsive olarak kodlanmıştır.
                                         </div>
                                     </div>
                                     <div class="tags">
@@ -362,8 +377,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card" data-category="freelance">
                                 <div class="cardTop">
+                                    <span class="category">Freelance</span>
                                     <div class="imageWrapper cover">
                                         <img src="public/assets/images/media/projects/zonguldak-jeopark.png" alt="Zonguldak Jeopark">
                                     </div>
@@ -379,7 +395,7 @@
                                             Zonguldak Jeopark - 2021 - Frelance
                                         </div>
                                         <div class="cardText">
-                                            HTML, CSS ve Javascript kodlamaları yapıldı.
+                                            Zonguldak Jeopark projesi, doğal ve kültürel alanları tanıtmak amacıyla hazırlanmış bir web sitesidir. HTML, SCSS ve JavaScript ile frontend geliştirmesi tamamlanmıştır.
                                         </div>
                                     </div>
                                     <div class="tags">
@@ -389,8 +405,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card" data-category="freelance">
                                 <div class="cardTop">
+                                    <span class="category">Freelance</span>
                                     <div class="imageWrapper cover">
                                         <img src="public/assets/images/media/projects/oka.png" alt="Orta Karadeniz">
                                     </div>
@@ -406,7 +423,7 @@
                                             Orta Karadeniz - 2022 - Frelance
                                         </div>
                                         <div class="cardText">
-                                            HTML, CSS ve Javascript kodlamaları yapıldı.
+                                            Orta Karadeniz bölgesini tanıtmak amacıyla tasarlanan bu web sitesi, HTML, SCSS ve JavaScript ile frontend tarafı geliştirilmiş ve responsive olarak kodlanmıştır.
                                         </div>
                                     </div>
                                     <div class="tags">
@@ -416,6 +433,10 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="centerContent">
+                            <button type="button" class="fixBtn button-black med moreProjectButton" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"><span>Daha Fazla Göster</span><span class="icon-arrow"></span></button>
                         </div>
                     </div>
                 </div>
@@ -438,6 +459,8 @@
         </footer>
     </div>
 
+    <script src="public/assets/plugin/jquery.js"></script>
+    <script src="public/assets/plugin/niceselect/jquery.nice-select.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="public/assets/front/js/app.js" defer></script>
 </body>

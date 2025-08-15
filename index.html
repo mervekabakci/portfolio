@@ -48,7 +48,7 @@
     </div>
     <header>
         <div class="container header">
-            <div class="brand" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">Merve Kabakcı</div>
+            <a href="/" class="brand" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">Merve Kabakcı</a>
             <!-- <a href="#" class="navbarButton">
                 <span class="line"></span>
             </a> -->
@@ -74,7 +74,7 @@
         <div class="main">
             <section id="anasayfa" class="homeSection">
                 <div class="container">
-                    <h1>
+                    <h1 class="wait">
                         <span>F</span>
                         <span>r</span>
                         <span>o</span>
@@ -114,12 +114,13 @@
                             </div>
                             <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Farklı alanlarda geliştirdiğim çalışmalarım ve web projelerimden seçkilere göz atabilirsiniz.</p>
                         </div>
-                        <a href="#" class="textLink" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"><span>Tüm Projeler</span><span class="icon-arrow"></span></a>
+                        <a href="projeler.html" class="textLink" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"><span>Tüm Projeler</span><span class="icon-arrow"></span></a>
                     </div>
                     <div class="sectionContent">
                         <div class="cards third" data-aos="flip-right" data-aos-delay="100" data-aos-duration="1000">
-                            <div class="card">
+                            <div class="card" data-category="gelistirme">
                                 <div class="cardTop">
+                                    <span class="category">Geliştirme Projesi</span>
                                     <div class="imageWrapper cover">
                                         <img src="public/assets/images/media/projects/yapilacaklar-listesi.png" alt="Yapılacaklar Listesi">
                                     </div>
@@ -136,7 +137,7 @@
                                             Todo List
                                         </div>
                                         <div class="cardText">
-                                            React.js ile kodlanmıştır. Geliştirme aşamasındadır.
+                                            React.js ile geliştirilmiş bir yapılacaklar listesi uygulaması. Kullanıcıların görev ekleyip yönetebileceği dinamik bir arayüze sahiptir. Hâlen geliştirme aşamasındadır.
                                         </div>
                                     </div>
                                     <div class="tags">
@@ -147,8 +148,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card" data-category="gelistirme">
                                 <div class="cardTop">
+                                    <span class="category">Geliştirme Projesi</span>
                                     <div class="imageWrapper cover">
                                         <img src="public/assets/images/media/projects/hesap-makinesi.png" alt="Hesap Makinesi">
                                     </div>
@@ -165,7 +167,7 @@
                                             Hesap Makinesi
                                         </div>
                                         <div class="cardText">
-                                            Javascript kullanılarak kodlaması yapılmıştır. Geliştirme aşamasındadır.
+                                            JavaScript ile geliştirilmiş, temel matematiksel işlemleri yapabilen modern bir hesap makinesi. Minimalist tasarımı ve sade arayüzü ile kolay kullanım sunar. Geliştirme aşamasındadır.
                                         </div>
                                     </div>
                                     <div class="tags">
@@ -175,8 +177,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card" data-category="freelance">
                                 <div class="cardTop">
+                                    <span class="category">Freelance</span>
                                     <div class="imageWrapper cover">
                                         <img src="public/assets/images/media/projects/iscimenhotel.png" alt="İşçimen Hotel">
                                     </div>
@@ -192,7 +195,7 @@
                                             İşçimen Hotel
                                         </div>
                                         <div class="cardText">
-                                            HTML, CSS ve Javascript kodlamaları yapıldı.
+                                            Bir otel web sitesi için HTML, CSS ve JavaScript kullanılarak oluşturulmuş modern ve responsive bir tasarım. Kullanıcıların otel bilgilerine hızlıca ulaşmasını sağlar.
                                         </div>
                                     </div>
                                     <div class="tags">
@@ -202,6 +205,93 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="card" data-category="freelance">
+                                <div class="cardTop">
+                                    <span class="category">Freelance</span>
+                                    <div class="imageWrapper cover">
+                                        <img src="public/assets/images/media/projects/egebilim.png" alt="EgeBilim Okulları">
+                                    </div>
+                                    <div class="card-overlay">
+                                        <div class="buttons">
+                                            <a class="fixBtn med button-black" href="https://www.egebilimokullari.k12.tr/" target="_blank">Canlı Demo</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cardBody">
+                                    <div>
+                                        <div class="cardTitle">
+                                            EgeBilim Okulları
+                                        </div>
+                                        <div class="cardText">
+                                            Freelance olarak geliştirilen bu proje, bir eğitim kurumunun web sitesi için hazırlanmıştır. HTML, CSS ve JavaScript ile kullanıcı dostu bir arayüz sunar.
+                                        </div>
+                                    </div>
+                                    <div class="tags">
+                                        <span>HTML</span>
+                                        <span>Scss</span>
+                                        <span>Javascript</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" data-category="ekip">
+                                <div class="cardTop">
+                                    <span class="category">Ekip / Bireysel</span>
+                                    <div class="imageWrapper cover">
+                                        <img src="public/assets/images/media/projects/herbandmore.png" alt="Herb&More">
+                                    </div>
+                                    <div class="card-overlay">
+                                        <div class="buttons">
+                                            <a class="fixBtn med button-black" href="https://herbandmore.co/" target="_blank">Canlı Demo</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cardBody">
+                                    <div>
+                                        <div class="cardTitle">
+                                            Herb&More
+                                        </div>
+                                        <div class="cardText">
+                                            Doğal ürünlerin tanıtımı ve satışı için tasarlanmış web sitesi. HTML, CSS ve JavaScript kullanılarak responsive ve şık bir tasarım ile kodlanmıştır.
+                                        </div>
+                                    </div>
+                                    <div class="tags">
+                                        <span>HTML</span>
+                                        <span>Scss</span>
+                                        <span>Javascript</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" data-category="ekip">
+                                <div class="cardTop">
+                                    <span class="category">Ekip / Bireysel</span>
+                                    <div class="imageWrapper cover">
+                                        <img src="public/assets/images/media/projects/psikolojik-sozluk.png" alt="Psikolojik Sözlük">
+                                    </div>
+                                    <div class="card-overlay">
+                                        <div class="buttons">
+                                            <a class="fixBtn med button-black" href="https://psikolojiksozluk.com/" target="_blank">Canlı Demo</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cardBody">
+                                    <div>
+                                        <div class="cardTitle">
+                                            Psikolojik Sözlük
+                                        </div>
+                                        <div class="cardText">
+                                            Psikoloji alanında terimlerin açıklamalarına yer veren, HTML, CSS ve JavaScript ile geliştirilmiş interaktif bir sözlük projesi.
+                                        </div>
+                                    </div>
+                                    <div class="tags">
+                                        <span>HTML</span>
+                                        <span>Scss</span>
+                                        <span>Javascript</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="centerContent">
+                            <a href="projeler.html" class="textLink" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"><span>Tüm Projeler</span><span class="icon-arrow"></span></a>
                         </div>
                     </div>
                 </div>

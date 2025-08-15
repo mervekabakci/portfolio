@@ -1,6 +1,8 @@
 @use "config/index" as config;
 @use "components/index" as components;
 @use "theme/index" as theme;
+@use "form/index" as form;
+
 .main {
   position: relative;
   overflow-x: hidden;
