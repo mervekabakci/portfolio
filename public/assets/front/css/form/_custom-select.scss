@@ -1,9 +1,47 @@
-.sectionHead{
-    .selectColumn{
-        margin-left: auto;
+.sectionHead {
+  .selectColumn {
+    margin-left: auto;
+    width: 400px;
+    position: relative;
+    @media screen and (max-width:991.98px) {
+        margin-left: 0;
+        margin-top: 20px;
     }
+  }
 }
 
-.customSelect{
+.customSelect {
+  width: 100%;
+  background: var(--primary-400);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 14px;
+  height: 50px;
+  &:after {
+    width: 10px;
+    height: 10px;
+    border-color: var(--white);
+  }
+  .current {
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+  }
 
+  .list {
+    width: 100%;
+    .option {
+      color: var(--primary-500);
+      font-size: 12px;
+      font-weight: 500;
+      &.selected {
+        font-weight: 600;
+      }
+    }
+  }
+  &.open {
+    .list {
+      box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.5);
+    }
+  }
 }
