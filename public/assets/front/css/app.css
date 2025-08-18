@@ -783,6 +783,7 @@ header .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
   }
 }
 header .brand {
@@ -790,11 +791,17 @@ header .brand {
   color: var(--black);
   font-weight: 900;
   margin-bottom: 40px;
-  cursor: default;
+  display: inline-flex;
+  transition: all 0.3s linear;
 }
 @media screen and (max-width: 991.98px) {
   header .brand {
     margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  header .brand:hover {
+    transform: scale(1.1) !important;
   }
 }
 header .navbarButton {
@@ -1751,6 +1758,11 @@ section .sectionContent .centerContent,
     margin-top: 20px;
   }
 }
+@media screen and (max-width: 480px) {
+  .sectionHead .selectColumn {
+    width: 100%;
+  }
+}
 
 .customSelect {
   width: 100%;
@@ -1759,11 +1771,15 @@ section .sectionContent .centerContent,
   font-weight: 600;
   font-size: 14px;
   height: 50px;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 30px;
 }
 .customSelect:after {
   width: 10px;
   height: 10px;
   border-color: var(--white);
+  right: 16px;
 }
 .customSelect .current {
   height: 50px;

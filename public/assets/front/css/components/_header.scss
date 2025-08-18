@@ -20,6 +20,7 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-direction: row;
     }
   }
   .brand {
@@ -27,9 +28,15 @@ header {
     color: var(--black);
     font-weight: 900;
     margin-bottom: 40px;
-    cursor: default;
+    display: inline-flex;
+    transition: all .3s linear;
     @media screen and (max-width: 991.98px) {
       margin-bottom: 0;
+    }
+    @media screen and (min-width:992px) {
+      &:hover{
+        transform: scale(1.1)!important;
+      }
     }
   }
   .navbarButton {
